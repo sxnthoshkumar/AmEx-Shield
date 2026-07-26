@@ -19,8 +19,8 @@ export const HITLApprovalQueue: React.FC<HITLApprovalQueueProps> = ({
     <div className="space-y-8 animate-fadeIn">
       {/* Header */}
       <div className="glass-panel p-8 rounded-2xl border border-white/10 space-y-2">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs font-mono">
-          <AlertTriangle className="w-3.5 h-3.5 text-amber-400" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-mono">
+          <AlertTriangle className="w-3.5 h-3.5 text-cyan-400" />
           <span>HUMAN-IN-THE-LOOP APPROVAL & REFLEXIVE PRE-MORTEM (#16)</span>
         </div>
         <h2 className="text-3xl font-extrabold text-white tracking-tight">
@@ -45,23 +45,23 @@ export const HITLApprovalQueue: React.FC<HITLApprovalQueueProps> = ({
             const req = item.evaluationResult.request;
 
             return (
-              <div key={item.id} className="glass-card rounded-2xl p-7 space-y-6 shadow-2xl border-amber-500/30">
+              <div key={item.id} className="glass-card rounded-2xl p-7 space-y-6 shadow-2xl border-cyan-500/30">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-5">
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="text-xs font-mono px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 font-bold">
+                      <span className="text-xs font-mono px-2.5 py-0.5 rounded bg-sky-500/20 text-cyan-300 border border-cyan-500/30 font-bold">
                         REQUIRE_HITL
                       </span>
                       <span className="text-xs font-mono text-slate-400">Queue ID: {item.id}</span>
                     </div>
                     <h3 className="text-xl font-bold text-white mt-1.5">
-                      {req.agentName} — <span className="text-amber-300">{req.actionType}</span>
+                      {req.agentName} — <span className="text-cyan-300">{req.actionType}</span>
                     </h3>
                   </div>
 
                   <div className="text-right font-mono">
                     <div className="text-xs text-slate-400">Target Amount</div>
-                    <div className="text-2xl font-extrabold text-amber-300">
+                    <div className="text-2xl font-extrabold text-cyan-300">
                       ${req.targetAmount?.toLocaleString() || 'N/A'}
                     </div>
                   </div>
@@ -69,8 +69,8 @@ export const HITLApprovalQueue: React.FC<HITLApprovalQueueProps> = ({
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="p-5 rounded-xl bg-slate-950/60 border border-white/5 space-y-2 text-xs font-mono">
-                    <div className="text-amber-300 font-bold flex items-center gap-2">
-                      <FileText className="w-4 h-4 text-amber-400" />
+                    <div className="text-cyan-300 font-bold flex items-center gap-2">
+                      <FileText className="w-4 h-4 text-cyan-400" />
                       Agent Stated Intent & Context
                     </div>
                     <p className="text-slate-300 leading-relaxed">{req.reasoning}</p>
@@ -80,8 +80,8 @@ export const HITLApprovalQueue: React.FC<HITLApprovalQueueProps> = ({
                   </div>
 
                   <div className="p-5 rounded-xl bg-slate-950/60 border border-white/5 space-y-2 text-xs font-mono">
-                    <div className="text-amber-300 font-bold flex items-center gap-2">
-                      <HelpCircle className="w-4 h-4 text-amber-400" />
+                    <div className="text-cyan-300 font-bold flex items-center gap-2">
+                      <HelpCircle className="w-4 h-4 text-cyan-400" />
                       Reflexive Pre-Mortem Self-Audit (#16)
                     </div>
                     <div className="text-slate-300">
@@ -109,7 +109,7 @@ export const HITLApprovalQueue: React.FC<HITLApprovalQueueProps> = ({
 
                   <button
                     onClick={() => onApproveItem(item.id)}
-                    className="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 hover:from-amber-300 hover:to-yellow-400 text-black text-xs font-mono font-extrabold flex items-center gap-2 shadow-glow-gold transition"
+                    className="px-6 py-3 rounded-xl bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-600 hover:from-sky-300 hover:to-cyan-300 text-black text-xs font-mono font-extrabold flex items-center gap-2 shadow-glow-cyan transition"
                   >
                     <UserCheck className="w-4 h-4 fill-black" />
                     AUTHORIZE EXECUTION

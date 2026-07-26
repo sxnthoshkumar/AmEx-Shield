@@ -22,8 +22,8 @@ export const ShadowExecutionView: React.FC<ShadowExecutionViewProps> = ({ lastSh
   return (
     <div className="space-y-8 animate-fadeIn">
       <div className="glass-panel p-8 rounded-2xl border border-white/10 space-y-2">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs font-mono">
-          <Zap className="w-3.5 h-3.5 text-amber-400" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-mono">
+          <Zap className="w-3.5 h-3.5 text-cyan-400" />
           <span>INVENTION CONCEPTS #3 & #12 • COUNTERFACTUAL SHADOW EXECUTION & DIGITAL TWINS</span>
         </div>
         <h2 className="text-3xl font-extrabold text-white tracking-tight">
@@ -64,8 +64,8 @@ export const ShadowExecutionView: React.FC<ShadowExecutionViewProps> = ({ lastSh
           </div>
 
           <div className="space-y-1.5 text-xs font-mono text-slate-300 pt-2">
-            <div>Predicted Loss Delta: <span className="font-bold text-amber-300">+${result.predictedLossDelta}</span></div>
-            <div>Historical Deviation: <span className="font-bold text-amber-300">{(result.historicalDeviationscore * 100).toFixed(0)}%</span></div>
+            <div>Predicted Loss Delta: <span className="font-bold text-cyan-300">+${result.predictedLossDelta}</span></div>
+            <div>Historical Deviation: <span className="font-bold text-cyan-300">{(result.historicalDeviationscore * 100).toFixed(0)}%</span></div>
           </div>
         </div>
       </div>

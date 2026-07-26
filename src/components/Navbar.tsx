@@ -42,17 +42,16 @@ export const Navbar: React.FC<NavbarProps> = ({
     <header className="sticky top-0 z-50 bg-[#040711]/95 backdrop-blur-xl border-b border-white/10 px-6 lg:px-8 py-3.5 shadow-2xl">
       <div className="max-w-[1500px] mx-auto flex items-center justify-between gap-6">
         
-        {/* Left: Authentic AmEx Brand Blue Box Logo */}
-        <div className="flex items-center gap-3.5 cursor-pointer shrink-0 group" onClick={() => setActiveTab('dashboard')}>
+        {/* Left: Clean Brand Logo */}
+        <div className="flex items-center gap-3 cursor-pointer shrink-0 group" onClick={() => setActiveTab('dashboard')}>
           <div className="relative">
-            <AmExShieldLogo size={46} className="transition-transform duration-300 group-hover:scale-105" />
+            <AmExShieldLogo size={36} className="transition-transform duration-300 group-hover:scale-105" />
             <div className={`absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full border border-[#040711] ${systemKilled ? 'bg-red-500 animate-ping' : 'bg-emerald-400'}`} />
           </div>
           <div>
-            <h1 className="font-black text-lg tracking-widest text-white flex items-center gap-2 leading-none">
-              AMERICAN EXPRESS <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-yellow-500">SHIELD</span>
+            <h1 className="font-extrabold text-lg tracking-wider text-white flex items-center gap-1.5 leading-none">
+              AmEx <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-500 font-extrabold">SHIELD</span>
             </h1>
-            <p className="text-[11px] text-sky-400/80 font-mono tracking-wider uppercase mt-1">Financial AI Control Plane</p>
           </div>
         </div>
 
@@ -67,14 +66,14 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => setActiveTab(item.id)}
                 className={`relative px-4 py-2 rounded-lg text-xs font-semibold tracking-wide transition-all flex items-center gap-2 whitespace-nowrap ${
                   isActive
-                    ? 'bg-gradient-to-r from-sky-500/25 to-blue-600/20 text-sky-300 border border-sky-500/40 shadow-glow-cyan'
+                    ? 'bg-gradient-to-r from-sky-500/25 to-blue-600/20 text-cyan-300 border border-cyan-500/40 shadow-glow-cyan'
                     : 'text-slate-400 hover:text-slate-200 hover:bg-white/5'
                 }`}
               >
-                <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-sky-400' : 'text-slate-400'}`} />
+                <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-cyan-400' : 'text-slate-400'}`} />
                 <span>{item.label}</span>
                 {item.badge !== undefined && item.badge > 0 && (
-                  <span className="px-2 py-0.5 text-[10px] font-bold rounded-full bg-amber-400 text-black">
+                  <span className="px-2 py-0.5 text-[10px] font-bold rounded-full bg-cyan-400 text-black">
                     {item.badge}
                   </span>
                 )}
@@ -90,12 +89,12 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => setEnginesOpen(!enginesOpen)}
               className={`px-4 py-2 rounded-lg text-xs font-semibold tracking-wide transition-all flex items-center gap-2 whitespace-nowrap border ${
                 currentEngineTab
-                  ? 'bg-amber-500/20 text-amber-300 border-amber-500/40 shadow-glow-gold'
+                  ? 'bg-cyan-500/20 text-cyan-300 border-cyan-500/40 shadow-glow-cyan'
                   : 'bg-slate-900/60 text-slate-300 border-white/5 hover:bg-white/5'
               }`}
             >
               <span>{currentEngineTab ? currentEngineTab.label : 'Governance Engines'}</span>
-              <ChevronDown className={`w-3.5 h-3.5 transition-transform ${enginesOpen ? 'rotate-180 text-amber-400' : 'text-slate-400'}`} />
+              <ChevronDown className={`w-3.5 h-3.5 transition-transform ${enginesOpen ? 'rotate-180 text-cyan-400' : 'text-slate-400'}`} />
             </button>
 
             {enginesOpen && (
@@ -115,11 +114,11 @@ export const Navbar: React.FC<NavbarProps> = ({
                       }}
                       className={`w-full px-3 py-2 rounded-lg text-xs font-medium transition-all flex items-center gap-2.5 ${
                         isActive
-                          ? 'bg-amber-500/20 text-amber-300 font-bold'
+                          ? 'bg-cyan-500/20 text-cyan-300 font-bold'
                           : 'text-slate-300 hover:bg-white/5'
                       }`}
                     >
-                      <Icon className={`w-4 h-4 ${isActive ? 'text-amber-400' : 'text-slate-400'}`} />
+                      <Icon className={`w-4 h-4 ${isActive ? 'text-cyan-400' : 'text-slate-400'}`} />
                       <span>{item.label}</span>
                     </button>
                   );

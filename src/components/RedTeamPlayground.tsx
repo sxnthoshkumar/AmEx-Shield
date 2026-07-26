@@ -102,7 +102,7 @@ export const RedTeamPlayground: React.FC<RedTeamPlaygroundProps> = ({ onRunAttac
                   {log.includes('CRITICAL') || log.includes('FORBIDDEN') ? (
                     <span className="text-red-400 font-bold">{log}</span>
                   ) : log.includes('AI FIREWALL') || log.includes('SECURITY') ? (
-                    <span className="text-amber-300">{log}</span>
+                    <span className="text-cyan-300">{log}</span>
                   ) : (
                     <span className="text-slate-300">{log}</span>
                   )}

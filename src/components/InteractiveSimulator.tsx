@@ -91,8 +91,8 @@ export const InteractiveSimulator: React.FC<InteractiveSimulatorProps> = ({
     <div className="space-y-8 animate-fadeIn">
       {/* Header */}
       <div className="glass-panel p-8 rounded-2xl border border-white/10 space-y-2">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs font-mono">
-          <Zap className="w-3.5 h-3.5 text-amber-400" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-mono">
+          <Zap className="w-3.5 h-3.5 text-cyan-400" />
           <span>INTERACTIVE AGENT SANDBOX</span>
         </div>
         <h2 className="text-3xl font-extrabold text-white tracking-tight">
@@ -108,7 +108,7 @@ export const InteractiveSimulator: React.FC<InteractiveSimulatorProps> = ({
         {/* Left Form Panel */}
         <div className="glass-card rounded-2xl p-7 space-y-6">
           <h3 className="text-lg font-bold text-white flex items-center gap-2.5 border-b border-white/10 pb-4">
-            <Lock className="w-5 h-5 text-amber-400" />
+            <Lock className="w-5 h-5 text-cyan-400" />
             1. Configure Agent Persona & Action
           </h3>
 
@@ -122,12 +122,12 @@ export const InteractiveSimulator: React.FC<InteractiveSimulatorProps> = ({
                   onClick={() => handleAgentChange(p.id)}
                   className={`p-3.5 rounded-xl border text-left transition ${
                     selectedAgentId === p.id
-                      ? 'bg-amber-500/15 border-amber-500/50 text-white shadow-glow-gold'
+                      ? 'bg-sky-500/20 border-cyan-500/60 text-white shadow-glow-cyan'
                       : 'bg-slate-950/40 border-white/5 text-slate-400 hover:border-white/10'
                   }`}
                 >
                   <div className="font-bold text-xs text-white truncate">{p.name}</div>
-                  <div className="text-[10px] font-mono text-amber-300 mt-1">Trust Score: {p.trustScore}/100</div>
+                  <div className="text-[10px] font-mono text-cyan-400 mt-1">Trust Score: {p.trustScore}/100</div>
                 </button>
               ))}
             </div>
@@ -140,7 +140,7 @@ export const InteractiveSimulator: React.FC<InteractiveSimulatorProps> = ({
               <select
                 value={actionType}
                 onChange={(e) => setActionType(e.target.value)}
-                className="w-full bg-slate-950/80 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-amber-400"
+                className="w-full bg-slate-950/80 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-cyan-400"
               >
                 {currentPassport.capabilities.map((cap) => (
                   <option key={cap} value={cap}>{cap}</option>
@@ -154,7 +154,7 @@ export const InteractiveSimulator: React.FC<InteractiveSimulatorProps> = ({
                 type="number"
                 value={targetAmount}
                 onChange={(e) => setTargetAmount(Number(e.target.value))}
-                className="w-full bg-slate-950/80 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-amber-400"
+                className="w-full bg-slate-950/80 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-cyan-400"
               />
             </div>
           </div>
@@ -166,7 +166,7 @@ export const InteractiveSimulator: React.FC<InteractiveSimulatorProps> = ({
               type="text"
               value={counterparty}
               onChange={(e) => setCounterparty(e.target.value)}
-              className="w-full bg-slate-950/80 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-amber-400"
+              className="w-full bg-slate-950/80 border border-white/10 rounded-xl px-3.5 py-2.5 text-xs font-mono text-white focus:outline-none focus:border-cyan-400"
             />
           </div>
 
@@ -177,7 +177,7 @@ export const InteractiveSimulator: React.FC<InteractiveSimulatorProps> = ({
               rows={3}
               value={reasoning}
               onChange={(e) => setReasoning(e.target.value)}
-              className="w-full bg-slate-950/80 border border-white/10 rounded-xl p-3.5 text-xs font-mono text-slate-200 focus:outline-none focus:border-amber-400"
+              className="w-full bg-slate-950/80 border border-white/10 rounded-xl p-3.5 text-xs font-mono text-slate-200 focus:outline-none focus:border-cyan-400"
             />
           </div>
 
@@ -226,7 +226,7 @@ export const InteractiveSimulator: React.FC<InteractiveSimulatorProps> = ({
           <button
             onClick={handleRunEvaluation}
             disabled={isEvaluating}
-            className="w-full py-4 rounded-xl bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 hover:from-amber-300 hover:to-yellow-400 text-black font-extrabold text-xs tracking-wider shadow-glow-gold transition flex items-center justify-center gap-2"
+            className="w-full py-4 rounded-xl bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-600 hover:from-sky-300 hover:to-cyan-300 text-black font-extrabold text-xs tracking-wider shadow-glow-cyan transition flex items-center justify-center gap-2"
           >
             {isEvaluating ? (
               <span>Evaluating...</span>
@@ -251,7 +251,7 @@ export const InteractiveSimulator: React.FC<InteractiveSimulatorProps> = ({
             <div className="text-center py-24 space-y-3">
               <Shield className="w-12 h-12 text-slate-700 mx-auto" />
               <p className="text-xs text-slate-400 font-mono">
-                Click <span className="text-amber-400 font-bold">EVALUATE WITH AMEX SHIELD</span> to see real-time governance decisions.
+                Click <span className="text-cyan-400 font-bold">EVALUATE WITH AMEX SHIELD</span> to see real-time governance decisions.
               </p>
             </div>
           ) : (
@@ -261,7 +261,7 @@ export const InteractiveSimulator: React.FC<InteractiveSimulatorProps> = ({
                   ? 'bg-emerald-950/50 border-emerald-500/40 text-emerald-300'
                   : lastResult.decision === 'FORBID'
                   ? 'bg-red-950/50 border-red-500/40 text-red-300'
-                  : 'bg-amber-950/50 border-amber-500/40 text-amber-300'
+                  : 'bg-cyan-950/50 border-cyan-500/40 text-cyan-300'
               }`}>
                 <div>
                   <div className="text-[10px] font-mono uppercase tracking-wider text-slate-400">Verdict</div>
@@ -286,26 +286,26 @@ export const InteractiveSimulator: React.FC<InteractiveSimulatorProps> = ({
               <div className="grid grid-cols-2 gap-3 text-xs font-mono">
                 <div className="p-3.5 rounded-xl bg-slate-950/60 border border-white/5">
                   <span className="text-slate-400 text-[10px] block">PASSPORT SCORE</span>
-                  <span className="font-bold text-amber-300">{lastResult.decayedTrustScore}/100</span>
+                  <span className="font-bold text-cyan-300">{lastResult.decayedTrustScore}/100</span>
                 </div>
                 <div className="p-3.5 rounded-xl bg-slate-950/60 border border-white/5">
                   <span className="text-slate-400 text-[10px] block">RISK BUDGET</span>
-                  <span className="font-bold text-amber-300">${lastResult.riskBudgetConsumed.toLocaleString()}</span>
+                  <span className="font-bold text-cyan-300">${lastResult.riskBudgetConsumed.toLocaleString()}</span>
                 </div>
               </div>
 
               {/* Certificate */}
-              <div className="p-4 rounded-xl bg-slate-950/80 border border-amber-500/30 space-y-2 font-mono text-xs">
-                <div className="flex items-center justify-between text-amber-300 font-bold border-b border-white/10 pb-2">
+              <div className="p-4 rounded-xl bg-slate-950/80 border border-cyan-500/30 space-y-2 font-mono text-xs">
+                <div className="flex items-center justify-between text-cyan-300 font-bold border-b border-white/10 pb-2">
                   <span className="flex items-center gap-1.5">
-                    <KeyRound className="w-4 h-4 text-amber-400" />
+                    <KeyRound className="w-4 h-4 text-cyan-400" />
                     Decision Certificate (#10)
                   </span>
                   <span className="text-[10px] text-emerald-400 font-normal">ECDSA Signed</span>
                 </div>
                 <div className="text-[11px] text-slate-300 space-y-1">
                   <div>Cert ID: <span className="text-white">{lastResult.certificate.certificateId}</span></div>
-                  <div>Signature: <span className="text-amber-200">{lastResult.certificate.issuerSignature}</span></div>
+                  <div>Signature: <span className="text-cyan-200">{lastResult.certificate.issuerSignature}</span></div>
                 </div>
               </div>
             </div>

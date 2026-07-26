@@ -4,10 +4,10 @@
 
 @layer base {
   body {
-    @apply bg-[#040711] text-slate-100 font-sans antialiased selection:bg-amber-400 selection:text-black min-h-screen;
+    @apply bg-[#040711] text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-black min-h-screen;
     background-image: 
-      radial-gradient(at 0% 0%, rgba(30, 58, 138, 0.15) 0px, transparent 50%),
-      radial-gradient(at 100% 0%, rgba(212, 175, 55, 0.08) 0px, transparent 50%),
+      radial-gradient(at 0% 0%, rgba(0, 112, 243, 0.15) 0px, transparent 50%),
+      radial-gradient(at 100% 0%, rgba(56, 189, 248, 0.1) 0px, transparent 50%),
       radial-gradient(at 50% 100%, rgba(7, 13, 31, 0.8) 0px, transparent 50%);
     background-attachment: fixed;
   }
@@ -15,14 +15,14 @@
 
 /* Executive Glassmorphism utility classes */
 .glass-panel {
-  background: rgba(10, 16, 34, 0.55);
+  background: rgba(10, 16, 34, 0.7);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .glass-card {
-  background: rgba(15, 23, 42, 0.45);
+  background: rgba(15, 23, 42, 0.5);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.07);
@@ -30,15 +30,15 @@
 }
 
 .glass-card:hover {
-  background: rgba(15, 23, 42, 0.65);
-  border-color: rgba(212, 175, 55, 0.3);
-  box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+  background: rgba(15, 23, 42, 0.75);
+  border-color: rgba(56, 189, 248, 0.35);
+  box-shadow: 0 10px 30px -10px rgba(56, 189, 248, 0.2);
 }
 
-.glass-gold-card {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.06) 0%, rgba(15, 23, 42, 0.6) 100%);
+.glass-blue-card {
+  background: linear-gradient(135deg, rgba(0, 112, 243, 0.1) 0%, rgba(15, 23, 42, 0.65) 100%);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(212, 175, 55, 0.25);
+  border: 1px solid rgba(56, 189, 248, 0.3);
 }
 
 /* Custom scrollbars */
@@ -54,7 +54,7 @@
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #D4AF37;
+  background: #38BDF8;
 }
 
 @keyframes fadeIn {

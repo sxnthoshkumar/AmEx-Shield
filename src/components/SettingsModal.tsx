@@ -22,10 +22,10 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose })
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fadeIn">
-      <div className="w-full max-w-lg rounded-2xl glass-panel border border-amber-500/30 p-7 space-y-6 shadow-2xl relative">
+      <div className="w-full max-w-lg rounded-2xl glass-panel border border-cyan-500/30 p-7 space-y-6 shadow-2xl relative">
         <div className="flex items-center justify-between border-b border-white/10 pb-4">
           <h3 className="text-lg font-bold text-white flex items-center gap-2.5">
-            <Key className="w-5 h-5 text-amber-400" />
+            <Key className="w-5 h-5 text-cyan-400" />
             AmEx Shield Settings & API Keys
           </h3>
           <button onClick={onClose} className="p-1 rounded-lg text-slate-400 hover:text-white hover:bg-white/5">
@@ -34,8 +34,8 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose })
         </div>
 
         <div className="space-y-4 text-xs font-mono">
-          <div className="p-4 rounded-xl bg-amber-400/5 border border-amber-400/20 text-slate-300">
-            <div className="font-bold flex items-center gap-1.5 text-amber-300">
+          <div className="p-4 rounded-xl bg-sky-500/10 border border-sky-500/20 text-slate-300">
+            <div className="font-bold flex items-center gap-1.5 text-cyan-300">
               <Cpu className="w-4 h-4" />
               Dual-Engine Configuration
             </div>
@@ -51,7 +51,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose })
               placeholder="sk-..."
               value={openaiKey}
               onChange={(e) => setOpenaiKey(e.target.value)}
-              className="w-full bg-slate-950/80 border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-amber-400"
+              className="w-full bg-slate-950/80 border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-cyan-400"
             />
           </div>
 
@@ -62,7 +62,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose })
               placeholder="sk-ant-..."
               value={anthropicKey}
               onChange={(e) => setAnthropicKey(e.target.value)}
-              className="w-full bg-slate-950/80 border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-amber-400"
+              className="w-full bg-slate-950/80 border border-white/10 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-cyan-400"
             />
           </div>
         </div>
@@ -83,7 +83,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = ({ isOpen, onClose })
           </button>
           <button
             onClick={handleSave}
-            className="px-5 py-2 rounded-xl bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 hover:from-amber-300 hover:to-yellow-400 text-black font-extrabold text-xs font-mono flex items-center gap-2 shadow-glow-gold"
+            className="px-5 py-2 rounded-xl bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-600 hover:from-sky-300 hover:to-cyan-300 text-black font-extrabold text-xs font-mono flex items-center gap-2 shadow-glow-cyan"
           >
             <Save className="w-4 h-4" />
             Save Configuration

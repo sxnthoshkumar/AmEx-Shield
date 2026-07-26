@@ -76,7 +76,7 @@ export const AuditComplianceExplorer: React.FC<AuditComplianceExplorerProps> = (
             </button>
             <button
               onClick={handleDownloadCSV}
-              className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 text-black text-xs font-mono font-extrabold flex items-center gap-2 shadow-glow-gold transition"
+              className="px-4 py-2.5 rounded-xl bg-gradient-to-r from-sky-400 via-cyan-400 to-blue-600 text-black text-xs font-mono font-extrabold flex items-center gap-2 shadow-glow-cyan transition"
             >
               <FileCode className="w-3.5 h-3.5" />
               CSV Audit
@@ -87,7 +87,7 @@ export const AuditComplianceExplorer: React.FC<AuditComplianceExplorerProps> = (
 
       <div className="glass-card rounded-2xl p-7 space-y-5 font-mono">
         <h3 className="text-base font-bold text-white flex items-center gap-2.5">
-          <KeyRound className="w-5 h-5 text-amber-400" />
+          <KeyRound className="w-5 h-5 text-cyan-400" />
           Independent Certificate Verification Tool
         </h3>
         <p className="text-xs text-slate-300">
@@ -100,11 +100,11 @@ export const AuditComplianceExplorer: React.FC<AuditComplianceExplorerProps> = (
             placeholder="Paste Decision Certificate ID (e.g. CERT-AMEX-20260726153022-A89F2B)..."
             value={certInput}
             onChange={(e) => setCertInput(e.target.value)}
-            className="flex-1 bg-slate-950/80 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-amber-400"
+            className="flex-1 bg-slate-950/80 border border-white/10 rounded-xl px-4 py-3 text-xs text-white focus:outline-none focus:border-cyan-400"
           />
           <button
             onClick={handleVerify}
-            className="px-6 py-3 rounded-xl bg-amber-400 hover:bg-amber-300 text-black font-extrabold text-xs flex items-center gap-2"
+            className="px-6 py-3 rounded-xl bg-cyan-400 hover:bg-cyan-300 text-black font-extrabold text-xs flex items-center gap-2"
           >
             <Search className="w-4 h-4" />
             Verify Signature

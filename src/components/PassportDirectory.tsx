@@ -11,8 +11,8 @@ export const PassportDirectory: React.FC<PassportDirectoryProps> = ({ passports 
     <div className="space-y-8 animate-fadeIn">
       {/* Header */}
       <div className="glass-panel p-8 rounded-2xl border border-white/10 space-y-2">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs font-mono">
-          <Lock className="w-3.5 h-3.5 text-amber-400" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-300 text-xs font-mono">
+          <Lock className="w-3.5 h-3.5 text-cyan-400" />
           <span>INVENTION CONCEPT #1 & #5 • GOVERNANCE PASSPORTS & TRUST DECAY</span>
         </div>
         <h2 className="text-3xl font-extrabold text-white tracking-tight">
@@ -27,7 +27,7 @@ export const PassportDirectory: React.FC<PassportDirectoryProps> = ({ passports 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {passports.map((passport) => {
           const isProbation = passport.probationStatus;
-          const scoreColor = passport.trustScore >= 90 ? 'text-emerald-400' : passport.trustScore >= 75 ? 'text-amber-400' : 'text-red-400';
+          const scoreColor = passport.trustScore >= 90 ? 'text-emerald-400' : passport.trustScore >= 75 ? 'text-cyan-400' : 'text-red-400';
 
           return (
             <div
@@ -36,7 +36,7 @@ export const PassportDirectory: React.FC<PassportDirectoryProps> = ({ passports 
             >
               <div className="flex items-start justify-between">
                 <div>
-                  <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-slate-900 text-amber-300 border border-amber-500/20">
+                  <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-slate-900 text-cyan-300 border border-cyan-500/20">
                     {passport.category}
                   </span>
                   <h3 className="text-xl font-bold text-white mt-2">
@@ -90,13 +90,13 @@ export const PassportDirectory: React.FC<PassportDirectoryProps> = ({ passports 
                 </div>
                 <div>
                   <div className="text-slate-400 text-[10px]">INCIDENTS</div>
-                  <div className="font-bold text-amber-400">{passport.incidentCount}</div>
+                  <div className="font-bold text-cyan-400">{passport.incidentCount}</div>
                 </div>
               </div>
 
               <div className="text-[10px] font-mono text-slate-400 pt-2 flex items-center justify-between">
                 <span className="flex items-center gap-1.5">
-                  <KeyRound className="w-3 h-3 text-amber-400" />
+                  <KeyRound className="w-3 h-3 text-cyan-400" />
                   Public Key: <span className="text-slate-300">{passport.publicKey}</span>
                 </span>
                 <span>W3C VC</span>

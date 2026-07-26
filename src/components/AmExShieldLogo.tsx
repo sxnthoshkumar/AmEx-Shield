@@ -5,111 +5,59 @@ interface AmExShieldLogoProps {
   size?: number;
 }
 
-export const AmExShieldLogo: React.FC<AmExShieldLogoProps> = ({ className = '', size = 44 }) => {
+export const AmExShieldLogo: React.FC<AmExShieldLogoProps> = ({ className = '', size = 36 }) => {
   return (
     <svg
       width={size}
       height={size}
-      viewBox="0 0 140 140"
+      viewBox="0 0 100 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={`shrink-0 ${className}`}
     >
       <defs>
-        {/* Authentic AmEx Blue Box Gradient */}
-        <linearGradient id="amexBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#0072CE" />
-          <stop offset="50%" stopColor="#0055A5" />
-          <stop offset="100%" stopColor="#002F6C" />
+        {/* Electric AmEx Blue & Cyan Gradient */}
+        <linearGradient id="amexCyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#38BDF8" />
+          <stop offset="50%" stopColor="#0070F3" />
+          <stop offset="100%" stopColor="#00388D" />
         </linearGradient>
 
-        {/* Gold Border Accent */}
-        <linearGradient id="amexBorderGold" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#FFF1B8" />
-          <stop offset="50%" stopColor="#D4AF37" />
-          <stop offset="100%" stopColor="#9A7513" />
+        <linearGradient id="amexCyanLight" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#E0F2FE" />
+          <stop offset="100%" stopColor="#38BDF8" />
         </linearGradient>
 
-        {/* Drop Shadow */}
-        <filter id="boxShadow" x="-10%" y="-10%" width="120%" height="120%">
-          <feDropShadow dx="0" dy="2" stdDeviation="3" floodColor="#0072CE" floodOpacity="0.4" />
+        {/* Ambient Glow */}
+        <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="2" stdDeviation="4" floodColor="#38BDF8" floodOpacity="0.35" />
         </filter>
       </defs>
 
-      {/* Iconic AmEx Rounded Square Blue Box */}
-      <rect
-        x="6"
-        y="6"
-        width="128"
-        height="128"
-        rx="22"
-        fill="url(#amexBlueGrad)"
-        stroke="url(#amexBorderGold)"
-        strokeWidth="3"
-        filter="url(#boxShadow)"
-      />
-
-      {/* Inner White Box Frame Line */}
-      <rect
-        x="13"
-        y="13"
-        width="114"
-        height="114"
-        rx="16"
-        stroke="#FFFFFF"
-        strokeWidth="1.2"
-        strokeOpacity="0.4"
-        fill="none"
-      />
-
-      {/* Centurion Gladiator Silhouette (Authentic AmEx Crest Detail) */}
+      {/* Minimalist Outer Shield Geometry */}
       <path
-        d="M70 24 C55 24 43 36 43 51 C43 62 50 71 60 76 L60 84 L80 84 L80 76 C90 71 97 62 97 51 C97 36 85 24 70 24 Z"
-        fill="#FFFFFF"
-        fillOpacity="0.12"
-      />
-
-      {/* Centurion Helmet Crest Arc */}
-      <path
-        d="M52 46 C52 38 60 32 70 32 C80 32 88 38 88 46"
-        stroke="#FFFFFF"
-        strokeWidth="2.5"
+        d="M50 10 L84 24 V48 C84 70 69 88 50 94 C31 88 16 70 16 48 V24 L50 10 Z"
+        stroke="url(#amexCyanGrad)"
+        strokeWidth="3.5"
         strokeLinecap="round"
-        fill="none"
-        opacity="0.8"
+        strokeLinejoin="round"
+        filter="url(#cyanGlow)"
+        fill="rgba(0, 112, 243, 0.08)"
       />
 
-      {/* Iconic AmEx Double-Line Outlined Typography: "AMERICAN" / "EXPRESS" -> "AMEX" / "SHIELD" */}
-      {/* Top Text Line: "AMEX" */}
-      <text
-        x="70"
-        y="62"
-        textAnchor="middle"
-        fill="#FFFFFF"
-        fontSize="22"
-        fontWeight="900"
-        fontFamily="'Inter', 'Arial Black', sans-serif"
-        letterSpacing="2.5"
-      >
-        AMEX
-      </text>
+      {/* Minimalist Geometric "A" Spearhead Monogram */}
+      <path
+        d="M50 24 L72 68 H61 L50 44 L39 68 H28 L50 24 Z"
+        fill="url(#amexCyanLight)"
+      />
 
-      {/* Bottom Text Line: "SHIELD" */}
-      <text
-        x="70"
-        y="92"
-        textAnchor="middle"
-        fill="#F5D061"
-        fontSize="20"
-        fontWeight="900"
-        fontFamily="'Inter', 'Arial Black', sans-serif"
-        letterSpacing="3"
-      >
-        SHIELD
-      </text>
-
-      {/* Decorative Gold Accent Bar */}
-      <rect x="36" y="102" width="68" height="3" rx="1.5" fill="url(#amexBorderGold)" />
+      {/* Central Trust Anchor Horizontal Bar */}
+      <path
+        d="M38 54 H62"
+        stroke="#38BDF8"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
     </svg>
   );
 };
